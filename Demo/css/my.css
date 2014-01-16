@@ -1,0 +1,9 @@
+input[type=text]{
+	width: 50%; 
+}
+
+body{
+	margin-left: 23px; 
+	margin-top: 23px;
+	background-color: rgba(235, 235, 235, 0.16);
+}
