@@ -33,39 +33,45 @@ Include Bootstrap, jQuery and the Number Validation Plugin on a page.
 
 ### Structure of parameters
 <pre>
-  |_rules:
-  |  |_type
-  |  |_required
-  |  |_maxvalue
-  |  |_minvalue
-  |  |_decimals
-  |  |_length
-  |_messages:
-  |  |_type
-  |  |_required
-  |  |_maxvalue
-  |  |_minvalue
-  |  |_decimals
-  |  |_length
-  |_settingserror:
-  |  |_tooltipplacement
-  |  |_tooltiptrigger
-  |  |_bordercolorok
-  |  |_bordercolornotok
+  {
+    rules:{
+      type,
+      required,
+      maxvalue,
+      minvalue,
+      decimals,
+      length
+    },  
+    messages:{
+      type,
+      required,
+      maxvalue,
+      minvalue,
+      decimals,
+      length
+    },
+    settingserror:{
+      setting,
+      tooltipplacement,
+      tooltiptrigger,
+      bordercolorok,
+      bordercolornotok
+    }
+  }
 </pre>
 
-### Setting `rules` parameter ###
+#### Setting `rules` parameter
 
 | Name          | Value           |Default      | Description  |
 | ------------- |:---------------------:|:-------------:|:------------|
 | `type`          | 'integer' or 'double' | 'integer'     | Define a type of Html input|
-| `required`      | true or false         | false         | Check if input has a value if required is `true`|
+| `required`      | `true` or `false`         | `false`         | Check if input has a value if required is `true`|
 | `maxvalue`      | number                | undefined     | Check if input has a value greater than `maxvalue` |
 | `minvalue`      | number                | undefined     | Check if input has a value less than `minvalue`  |
 | `length`        | number                | undefined     | Check if the number of characters that makes up the integer part of the input value is greater than `length` |
 | `decimals`      | number                | undefined     | Check if the number of characters that makes up the decimal part of the input value is greater than `decimals` |
 
-###Setting `messages` parameter###
+#### Setting `messages` parameter
 | Name          | Value  |Default | Description  |
 | ------------- |:------:|:------:|:------------|
 | `type`        | string | " "     | Define a error message for the rule `type`|
@@ -75,15 +81,16 @@ Include Bootstrap, jQuery and the Number Validation Plugin on a page.
 | `length`      | string | " "     | Define a error message for the rule  `length`|
 | `decimals`    | number | " "     | Define a error message for the rule  `decimals`|
 
-### Setting `settingserror` parameter ###
+#### Setting `settingserror` parameter
 | Name               | Value  |Default | Description  |
 | ------------------ |:------:|:------:|:------------|
-| `tooltipplacement` | 'top', 'bottom', 'left', 'right' or 'auto' | 'bottom' | how to position the tooltip. When 'auto' is specified, it will dynamically reorient the tooltip. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right.|
-| `tooltiptrigger`   | 'click', 'hover', 'focus' or 'manual' | 'hover'     | how tooltip is triggered. You may pass multiple triggers; separate them with a space.|
+| `setting`    |`true` or `false`         | `true`     |If the property is setted a `false`, the error message is not shown   |
+| `tooltipplacement` | 'top', 'bottom', 'left', 'right' or 'auto' | 'bottom' | How to position the tooltip. When 'auto' is specified, it will dynamically reorient the tooltip. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right|
+| `tooltiptrigger`   | 'click', 'hover', 'focus' or 'manual' | 'hover'     | How tooltip is triggered. You may pass multiple triggers; separate them with a space|
 | `bordercolorok`    | string | Current color of the input     | Define a `border-color` property of the input when the validation return true |
 | `bordercolornotok` | string | 'red'     | Define a `border-color` property of the input when the validation return false |
 
-### Example double type ###
+### Example double type
 ```html
 <input type="text" id="double" name="double">
 ```
@@ -107,6 +114,27 @@ $("#double").masknumber({
     }
 });
 ```
+
+```html
+<input type="text" id="double" name="double">
+```
+
+### Example validation function
+```javascript
+$("#double").validnumber({
+    rules: {
+        type: 'double',
+        decimals: 2,
+        maxvalue: 100,
+        minvalue: 3
+    },
+    settingserror: {
+        setting: false,
+        tooltipplacement: "right"
+    }
+});
+```
+This `validnumber` function return `true` or `false` if and only if the value of the input is valid for the `rules` setted. Since that the parameter `setting` is setted a `false`, the error message is not show on the Html input.
 
 ## Reporting an Issue
 
