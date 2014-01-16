@@ -134,7 +134,7 @@ $("#double").validnumber({
     }
 });
 ```
-This `validnumber` function return `true` or `false` if and only if the value of the input is valid for the `rules` setted. Since that the parameter `setting` is setted a `false`, the error message is not show on the Html input.
+This `validnumber` function return `true` or `false` if and only if the value of the input is valid for the `rules` setted. Since that the parameter `setting` is setted a `false`, the error message is not shown in the Html input.
 
 ## Reporting an Issue
 
