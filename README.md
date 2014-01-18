@@ -146,4 +146,5 @@ This `validnumber` function return `true` or `false` if and only if the value of
 
 ## License
 Licensed under the MPL version 2.0 license.
+
 Copyright (c) 2014 Alexander Perucci.
