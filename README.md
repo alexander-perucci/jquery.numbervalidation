@@ -107,7 +107,7 @@ $("#double").masknumber({
         type: "The value is not decimals",
         decimals: "The max number of decimals is 2",
         maxvalue: "The value is greater than 100",
-        minvalue: "The value is less than 100"
+        minvalue: "The value is less than 3"
     },
     settingserror: {
         tooltipplacement: "right"
