@@ -114,12 +114,12 @@ $("#double").masknumber({
     }
 });
 ```
+### Example validation function
 
 ```html
 <input type="text" id="double" name="double">
 ```
 
-### Example validation function
 ```javascript
 $("#double").validnumber({
     rules: {
