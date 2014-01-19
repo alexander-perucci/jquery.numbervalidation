@@ -129,8 +129,7 @@ $("#double").validnumber({
         minvalue: 3
     },
     settingserror: {
-        setting: false,
-        tooltipplacement: "right"
+        setting: false
     }
 });
 ```
