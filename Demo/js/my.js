@@ -1,3 +1,12 @@
+function closeAlerts(){
+  $("#alertSuccess").css("display","none");
+  $("#alertDanger").css("display","none");
+}
+
+function openAlert(valid){
+        valid ? $("#alertSuccess").css("display","block") : $("#alertDanger").css("display","block");
+}
+
 $( document ).ready(function() {
         $("#integer").masknumber({
                 rules:{
@@ -59,11 +68,22 @@ $( document ).ready(function() {
                         tooltipplacement:"right"
                 }
         });
-
+        
         $( "#form" ).submit(function( event ) {
-                if (!$("input").validnumber()){
-                        return false;
-                }
-                event.preventDefault();
+                closeAlerts();
+                        if (!$("input").validnumber()){
+                openAlert(false);
+                return false;
+            }
+            openAlert(true);
+            event.preventDefault();
+        });
+
+        $( "#buttonAlertSuccess" ).click(function() {
+                closeAlerts();
+        });
+        
+        $( "#buttonAlertDanger" ).click(function() {
+                closeAlerts();
         });
 });
