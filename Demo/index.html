@@ -10,51 +10,82 @@
       <script type='text/javascript' src='js/my.js'></script>
    </head>
    <body>
-      <ul class="nav nav-tabs" style="margin-bottom: 20px;">
-         <li class="active"><a href="http://jquerynumbervalidation.altervista.org/demo-jquerynumbervalidation">Demo</a></li>
-         <li><a href="http://jquerynumbervalidation.altervista.org/">Documentation</a></li>
-      </ul>
-     <div id="alertSuccess" class="alert alert-success alert-dismissable" style="display:none;">
-        <button id="buttonAlertSuccess" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <strong>Success!</strong> The form is Valid!
+      <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+         <div class="container">
+            <div class="navbar-header">
+               <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+               <span class="sr-only">Toggle navigation</span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               <span class="icon-bar"></span>
+               </button>
+               <a class="navbar-brand" href="http://jquerynumbervalidation.altervista.org/">jQuery Number Validation Plugin</a>
+            </div>
+            <div class="collapse navbar-collapse">
+               <ul class="nav navbar-nav">
+                  <li><a href="http://jquerynumbervalidation.altervista.org/demo-jquerynumbervalidation/index.html">Demo</a></li>
+               </ul>
+            </div>
+            <!-- /.nav-collapse -->
+         </div>
+         <!-- /.container -->
       </div>
-      <div id="alertDanger" class="alert alert-danger alert-dismissable" style="display:none;">
-        <button id="buttonAlertDanger" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-        <strong>Error!</strong> The form is not Valid!
-      </div>
-      <div class="container">
+      <!-- /.navbar -->
+      <div class="container mycontainer">
          <h2>jQuery Number Validation Plugin Demo</h2>
          <p class="text-muted">Number Validation Plugin is a plugin for jQuery that performs validation of an HTML input number type.</p>
-      </div>
-      <br><br>
-      <form id="form">
-         <div class="row">
-            <div class="col-md-6 col-md-offset-1">
-               <div class="form-group">
-                  <label for="integer">Integer</label>
-                  <input type="text" class="form-control" name="integer" id="integer">
-                  <p class="help-block">{ type: 'integer', required: true, minvalue: -3, maxvalue: 100 }</p>
+         <br>         
+         <form id="form">
+            <div id="alertSuccess" class="alert alert-success alert-dismissable" style="display:none;">
+               <button id="buttonAlertSuccess" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+               <strong>Success!</strong> The form is Valid!
+            </div>
+            <div id="alertDanger" class="alert alert-danger alert-dismissable" style="display:none;">
+               <button id="buttonAlertDanger" type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+               <strong>Error!</strong> The form is not Valid!
+            </div>
+            <div class="panel panel-info">
+               <div class="panel-heading">
+                  <h3 class="panel-title">Try the Demo !</h3>
                </div>
-               <div class="form-group">
-                  <label for="double2decimal">Double 2 Decimal</label>
-                  <input type="text" class="form-control" name="double2decimal" id="double2decimal">
-                  <p class="help-block">{ type: 'double', decimals: 2 }</p>
-               </div>
-               <div class="form-group">
-                  <label for="doubleMax100">Double Max 100</label>
-                  <input type="text" class="form-control" name="doubleMax100" id="doubleMax100" >
-                  <p class="help-block">{ type: 'double', maxvalue: 100 }</p>
-               </div>
-               <div class="form-group">
-                  <label for="doubleMin3">Double Min 3</label>
-                  <input type="text" class="form-control" name="doubleMin3" id="doubleMin3" >
-                  <p class="help-block">{ type: 'double', minvalue: 3 }</p>
-               </div>
-               <div class="form-group">
-                  <button type="submit" class="btn btn-primary btn-lg">Invia</button>
+               <div class="panel-body">
+                  <div class="row">
+                     <div class="col-md-5">
+                        <div class="form-group">
+                           <label for="integer">Integer</label>
+                           <input type="text" class="form-control" name="integer" id="integer">
+                           <p class="help-block">{ type: 'integer', required: true, minvalue: -3, maxvalue: 100 }</p>
+                        </div>
+                        <div class="form-group">
+                           <label for="double2decimal">Double 2 Decimal</label>
+                           <input type="text" class="form-control" name="double2decimal" id="double2decimal">
+                           <p class="help-block">{ type: 'double', decimals: 2 }</p>
+                        </div>
+                     </div>
+                     <div class="col-md-5">
+                        <div class="form-group">
+                           <label for="doubleMax100">Double Max 100</label>
+                           <input type="text" class="form-control" name="doubleMax100" id="doubleMax100" >
+                           <p class="help-block">{ type: 'double', maxvalue: 100 }</p>
+                        </div>
+                        <div class="form-group">
+                           <label for="doubleMin3">Double Min 3</label>
+                           <input type="text" class="form-control" name="doubleMin3" id="doubleMin3" >
+                           <p class="help-block">{ type: 'double', minvalue: 3 }</p>
+                        </div>
+                     </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                     <div class="form-group">
+                        <div class="col-md-5"></div>
+                        <div class="col-md-5"></div>
+                        <div class="col-md-2"><button type="submit" class="btn btn-primary btn-lg  btn-block">Submit</button></div>
+                     </div>
+                  </div>
                </div>
             </div>
-         </div>
-      </form>
+         </form>
+      </div>
    </body>
 </html>
