@@ -84,7 +84,7 @@ Include Bootstrap, jQuery and the Number Validation Plugin on a page.
 #### Setting `settingserror` parameter
 | Name               | Value  |Default | Description  |
 | ------------------ |:------:|:------:|:------------|
-| `setting`    |`true` or `false`         | `true`     |If the property is setted a `false`, the error message is not shown   |
+| `setting`    |`true` or `false`         | `true`     |If the property is set a `false`, the error message is not shown   |
 | `tooltipplacement` | 'top', 'bottom', 'left', 'right' or 'auto' | 'bottom' | How to position the tooltip. When 'auto' is specified, it will dynamically reorient the tooltip. For example, if placement is "auto left", the tooltip will display to the left when possible, otherwise it will display right|
 | `tooltiptrigger`   | 'click', 'hover', 'focus' or 'manual' | 'hover'     | How tooltip is triggered. You may pass multiple triggers; separate them with a space|
 | `bordercolorok`    | string | Current color of the input     | Define a `border-color` property of the input when the validation return true |
