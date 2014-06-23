@@ -142,6 +142,8 @@ This `validnumber` function return `true` or `false` if and only if the value of
 3. Indicate what browsers the issue can be reproduced in. **Note: IE Compatibilty modes issues will not be addressed.**
 4. What version of the plug-in is the issue reproducible in. Is it reproducible after updating to the latest version.
 
+## Contribute
+You can also support this project by donating on Gittip [here](https://www.gittip.com/prednaxela/)
 
 ## License
 Licensed under the MPL version 2.0 license.
