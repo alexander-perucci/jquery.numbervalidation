@@ -1,6 +1,7 @@
 /*
     jQuery Number Validation Plugin v1.0.1
     copyright: Alexander Perucci
+    site: alexanderperucci.com
     license: Mozilla Public License Version 2.0
 */
 
