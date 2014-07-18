@@ -1,7 +1,7 @@
 jQuery Number Validation Plugin
 =======================
 
-Number Validation Plugin is a plugin for jQuery that performs validation of an HTML input number type. [Try It !](http://www.alexanderperucci.com/jquery-number-validation/)
+Number Validation Plugin is a plugin for jQuery that performs validation of an HTML input number type. [Try It !](http://www.alexanderperucci.com/portfolio-demo/jquery-number-validation/)
 
 ## Getting Started
 
